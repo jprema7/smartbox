@@ -4,7 +4,7 @@ import 'package:smartbox/view/scan_qr.dart';
 import 'package:smartbox/view/generate_qr.dart';
 import 'package:smartbox/view/add_storage_header.dart';
 import 'package:smartbox/view/add_storage_items.dart';
-import 'package:smartbox/constants.dart';
+import 'package:smartbox/util/constants.dart';
 
 void main() => runApp(MaterialApp(
   theme: ThemeData(

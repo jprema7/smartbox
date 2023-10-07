@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-import 'package:smartbox/constants.dart';
+import 'package:smartbox/util/constants.dart';
 class ScanQR extends StatefulWidget {
   const ScanQR({super.key});
 

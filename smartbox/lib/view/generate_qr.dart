@@ -8,7 +8,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
-import 'package:smartbox/constants.dart';
+import 'package:smartbox/util/constants.dart';
 
 class GenerateQR extends StatefulWidget {
   const GenerateQR({super.key});

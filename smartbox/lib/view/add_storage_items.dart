@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartbox/constants.dart';
+import 'package:smartbox/util/constants.dart';
 import 'package:smartbox/model/storagebox.dart';
 import 'package:smartbox/services/storagebox_service.dart';
 class AddStorageItems extends StatefulWidget {

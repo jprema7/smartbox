@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartbox/constants.dart';
+import 'package:smartbox/util/constants.dart';
 import 'package:smartbox/model/storagebox.dart';
 class AddStorageHeader extends StatefulWidget {
   const AddStorageHeader({super.key});
