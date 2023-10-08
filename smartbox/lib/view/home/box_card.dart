@@ -5,9 +5,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 class BoxCard extends StatefulWidget {
   final StorageBox? storageBox;
   final Function? onTap;
-
   BoxCard({required this.storageBox, required this.onTap, super.key});
-
   @override
   State<BoxCard> createState() => _BoxCardState();
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartbox/model/storagebox.dart';
-import 'package:smartbox/services/storagebox_service.dart';
-import 'package:smartbox/view/box_card.dart';
+import 'package:smartbox/service/storagebox_service.dart';
+import 'package:smartbox/view/home/box_card.dart';
 import 'package:smartbox/util/constants.dart';
 
 class Home extends StatefulWidget {
@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   List<StorageBox> storageBoxes = [];
 
   void loadData() async {
-    await StorageBoxService.instance()
+    await StorageBoxService.instant()
         .getStorageBoxes()
         .then((value) {
             setState(() {

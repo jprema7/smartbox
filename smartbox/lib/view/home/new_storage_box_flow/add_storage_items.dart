@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartbox/util/constants.dart';
 import 'package:smartbox/model/storagebox.dart';
-import 'package:smartbox/services/storagebox_service.dart';
+import 'package:smartbox/service/storagebox_service.dart';
 class AddStorageItems extends StatefulWidget {
   const AddStorageItems({super.key});
 
@@ -49,7 +49,7 @@ class _AddStorageItemsState extends State<AddStorageItems> {
                                 // The "Yes" button
                                 TextButton(
                                     onPressed: () {
-                                      Navigator.pushReplacementNamed(context, Routes.HOME);
+                                      Navigator.pushNamedAndRemoveUntil(context, Routes.HOME, (route) => false);
                                     },
                                     child: const Text('Yes')),
                                 TextButton(
@@ -66,14 +66,13 @@ class _AddStorageItemsState extends State<AddStorageItems> {
                   VerticalDivider(thickness: 1.0,),
                   Expanded(flex: 1, child: MaterialButton(
                     child: const Text(
-                        'Save',
+                        'Next',
                         style: TextStyle(
                           fontSize: 20.0,
                         )
                     ),
                     onPressed: () {
-                      StorageBoxService.instance().createStorageBox(storageBox);
-                      Navigator.pushReplacementNamed(context, Routes.HOME);
+                      Navigator.pushReplacementNamed(context, Routes.SET_FULLNESS,  arguments: { 'storage_box_record' : storageBox });
                     },
                   ))
                 ],

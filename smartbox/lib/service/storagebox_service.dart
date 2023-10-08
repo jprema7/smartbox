@@ -2,7 +2,9 @@ import 'package:smartbox/model/storagebox.dart';
 import 'package:smartbox/model/item.dart';
 class StorageBoxService {
 
-  static StorageBoxService instance() => StorageBoxService();
+  static final StorageBoxService _instance = StorageBoxService();
+
+  static StorageBoxService instant() => _instance;
 
   List<StorageBox> storageBoxes = [
     StorageBox(id: '1', name: 'Electrical Box', fullness: 50.0, items: [
