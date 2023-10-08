@@ -25,6 +25,7 @@ class _GenerateQRState extends State<GenerateQR> {
   Widget build(BuildContext context) {
 
     String storageBoxID = generateStorageBoxID();
+    Color qrColor = Colors.black;
 
     return Scaffold(
       appBar: AppBar(
@@ -42,6 +43,8 @@ class _GenerateQRState extends State<GenerateQR> {
                         data: storageBoxID,
                         version: QrVersions.auto,
                         size: 200.0,
+                        eyeStyle: QrEyeStyle(color: qrColor, eyeShape: QrEyeShape.square),
+                        dataModuleStyle: QrDataModuleStyle(color: qrColor, dataModuleShape: QrDataModuleShape.square),
                       )
                   ),
               )
