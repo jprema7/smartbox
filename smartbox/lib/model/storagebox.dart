@@ -16,12 +16,19 @@ class StorageBox {
   // TODO: Add storage area attribute
 
   StorageBox(
-      {required this.id,
-      required this.name,
+      {this.id = '',
+      this.name = '',
       List<Item>? items,
       this.fullness = 0,
       this.flammable = false,
       this.hazardous = false,
       this.fragile = false})
       : items = items ?? [];
+
+  @override
+  String toString() {
+    return 'StorageBox[id=$id, name=$name, items=$items, '
+        'fullness=$fullness, flammable=$flammable, hazardous=$hazardous, fragile=$fragile]';
+  }
+
 }
