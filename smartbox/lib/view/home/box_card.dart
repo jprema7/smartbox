@@ -38,6 +38,15 @@ class _BoxCardState extends State<BoxCard> {
           initialValue: widget.storageBox!.fullness,
         ),
         title: Text(widget.storageBox!.name),
+        trailing: PopupMenuButton<int>(
+          onSelected: (item) => {
+          },
+          itemBuilder: (context) => [
+            PopupMenuItem<int>(value: 0, child: Text('Edit')),
+            PopupMenuItem<int>(value: 1, child: Text('Attach Photo')),
+            PopupMenuItem<int>(value: 2, child: Text('Delete')),
+          ],
+        ),
       ),
     );
   }

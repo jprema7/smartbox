@@ -10,10 +10,6 @@ class AddStorageItems extends StatefulWidget {
   State<AddStorageItems> createState() => _AddStorageItemsState();
 }
 
-// TODO:
-//  - Updating name must update the storage box item reference
-// -
-
 class _AddStorageItemsState extends State<AddStorageItems> {
 
   final _formKey = GlobalKey<FormState>();
