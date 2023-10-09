@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:smartbox/util/constants.dart';
 import 'package:smartbox/view/home/home.dart';
 import 'package:smartbox/view/home/new_storage_box_flow/add_storage_header.dart';
 import 'package:smartbox/view/home/new_storage_box_flow/add_storage_items.dart';
 import 'package:smartbox/view/home/new_storage_box_flow/set_fullness.dart';
 import 'package:smartbox/view/home/scan_qr.dart';
 import 'package:smartbox/view/home/generate_qr.dart';
-import 'package:smartbox/view/home/new_storage_box_flow/add_storage_header.dart';
-import 'package:smartbox/view/home/new_storage_box_flow/add_storage_items.dart';
-import 'package:smartbox/util/constants.dart';
+import 'package:smartbox/view/home/view_storage_box_flow/view_storage_box_record.dart';
 
 void main() => runApp(MaterialApp(
   theme: ThemeData(
@@ -21,6 +20,7 @@ void main() => runApp(MaterialApp(
     Routes.ADD_STORAGE_HEADER_DETAILS : (context) => AddStorageHeader(),
     Routes.ADD_STORAGE_ITEMS : (context) => AddStorageItems(),
     Routes.SET_FULLNESS : (context) => SetFullness(),
+    Routes.VIEW_STORAGE_BOX_RECORD : (context) => ViewStorageBox(),
   },
 ));
 

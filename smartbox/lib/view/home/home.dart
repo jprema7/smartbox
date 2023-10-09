@@ -47,7 +47,9 @@ class _HomeState extends State<Home> {
                 itemCount: storageBoxes.length,
                 itemBuilder: (context, index) {
                   return BoxCard(
-                      onTap: () {}, // TODO: Open Box View
+                      onTap: () {
+                        Navigator.pushNamed(context, Routes.VIEW_STORAGE_BOX_RECORD, arguments: {'storage_box_record': storageBoxes[index]});
+                      },
                       storageBox: storageBoxes[index]);
                 },
               ),

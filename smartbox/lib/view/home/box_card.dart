@@ -3,8 +3,8 @@ import 'package:smartbox/model/storagebox.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class BoxCard extends StatefulWidget {
-  final StorageBox? storageBox;
-  final Function? onTap;
+  final StorageBox storageBox;
+  final Function onTap;
   BoxCard({required this.storageBox, required this.onTap, super.key});
   @override
   State<BoxCard> createState() => _BoxCardState();
@@ -15,7 +15,9 @@ class _BoxCardState extends State<BoxCard> {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        onTap: () => widget.onTap,
+        onTap: () {
+          widget.onTap();
+        },
         leading: SleekCircularSlider(
           appearance: CircularSliderAppearance(
               infoProperties: InfoProperties(

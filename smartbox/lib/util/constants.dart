@@ -5,6 +5,7 @@ class Routes {
   static const String ADD_STORAGE_HEADER_DETAILS ='/add_storage_header_details';
   static const String ADD_STORAGE_ITEMS ='/add_storage_items';
   static const String SET_FULLNESS ='/set_fullness';
+  static const String VIEW_STORAGE_BOX_RECORD ='/view_storage_record';
 }
 
 class AppConstants {
