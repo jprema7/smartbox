@@ -35,7 +35,7 @@ class _SetFullnessState extends State<SetFullness> {
                         ),
                       ),
                       size: 300,
-                      customWidths: CustomSliderWidths(progressBarWidth: 15, trackWidth: 10),
+                      customWidths: CustomSliderWidths(progressBarWidth: 15, trackWidth: 1),
                       customColors: CustomSliderColors(
                           trackColor: Colors.grey,
                           progressBarColors: [
