@@ -31,9 +31,13 @@ class StorageBox {
         this.qrCodeColor = 000000
       }) : items = items ?? [];
 
+  void addItem(String name) {
+    items.add(Item(name: name, id: '${items.length}'));
+  }
   @override
   String toString() {
     return 'StorageBox[id=$id, name=$name, items=$items, '
         'fullness=$fullness, flammable=$flammable, hazardous=$hazardous, fragile=$fragile, qrCodeColor=$qrCodeColor]';
   }
+
 }

@@ -18,10 +18,11 @@ class _SetFullnessState extends State<SetFullness> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Set Storage Fullness'),
+        title: Text('Storage Fullness'),
       ),
       body: Column(
         children: [
+          Expanded(child: Center(child: Text('Use slider to specify storage fullness'))),
           Expanded(flex: 5, child:
             Container(child:
               Center(child:
@@ -34,7 +35,7 @@ class _SetFullnessState extends State<SetFullness> {
                         ),
                       ),
                       size: 300,
-                      customWidths: CustomSliderWidths(progressBarWidth: 5, trackWidth: 1),
+                      customWidths: CustomSliderWidths(progressBarWidth: 15, trackWidth: 10),
                       customColors: CustomSliderColors(
                           trackColor: Colors.grey,
                           progressBarColors: [

@@ -16,8 +16,9 @@ class _AddStorageHeaderState extends State<AddStorageHeader> {
     StorageBox storageBox = StorageBox(id: storageBoxId);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text('Add Storage Details')
+        title: Text('Storage Details')
       ),
       body: StorageHeaderForm(storageBox)
     );
@@ -40,6 +41,7 @@ class _StorageHeaderFormState extends State<StorageHeaderForm> {
 
     return Form(
       key: _formKey,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         children: [
           Expanded(
@@ -58,33 +60,30 @@ class _StorageHeaderFormState extends State<StorageHeaderForm> {
   }
 
   Widget? _buildForm(StorageBox storageBox) {
-    var nameTextEditingController = TextEditingController(text: storageBox.name);
     return Padding(
       padding: const EdgeInsets.all(50.0),
       child: Column(
         children: <Widget> [
-          TextField(
-            controller: TextEditingController(text: storageBox.id),
+          TextFormField(
+            initialValue: storageBox.id,
             enabled: false,
             decoration: InputDecoration(
               labelText: 'ID',
             ),
           ),
           TextFormField(
-            controller: nameTextEditingController,
+            initialValue: storageBox.name,
             decoration: InputDecoration(
               labelText: 'Name',
             ),
-            onTapOutside: (pointer) {
-              setState(() {
-                storageBox.name = nameTextEditingController.value.text;
-              });
-            },
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter a name';
               }
               return null;
+            },
+            onChanged: (value) {
+              storageBox.name = value;
             },
           ),
           InputDecorator(decoration: InputDecoration(labelText: 'Flammable'),
